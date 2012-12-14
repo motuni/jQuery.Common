@@ -1,7 +1,7 @@
 /*
 --------------------------------------------------------
 jQuery Utility Plugin
-@motu http://snippetsme.tumblr.com/
+https://github.com/motuni/jQuery.Common
 
 Update:2012.12.12
 --------------------------------------------------------
