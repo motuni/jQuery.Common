@@ -1,0 +1,256 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../base.css">
+<script language="JavaScript" type="text/javascript" src="../jquery-1.7.1.min.js" ></script>
+<script language="JavaScript" type="text/javascript" src="../jquery.easing.1.3.js" ></script>
+<script language="JavaScript" type="text/javascript" src="jquery.common.js" ></script>
+<script language="JavaScript" type="text/javascript" src="common.js" ></script>
+<title>base</title>
+<style>
+.main {
+	float:left;
+	margin:20px;
+	width:700px;
+}
+h3 { 
+	margin:25px 0 0 0;
+	padding:0 0 12px 0;
+	font-size:14px;
+}
+.side{
+	position:relative;
+	float:left;
+	margin:20px 20px 20px 0;
+	width:200px;
+	background:#eee;
+}
+.side ul li{
+	padding:5px;
+}
+
+.menuArea{
+	margin:0 0 50px 0;
+}
+.menuArea .list{
+	position:absolute;
+	z-index:1000;
+}
+.menuArea .list li{
+	float:left;
+	display:block;
+	width:200px;
+}
+.menuArea .list li a{
+	display:block;
+	padding:3px 5px;
+	background:#eee;
+}
+.menuArea .list .sub{
+	display:none;
+	width:200px;
+}
+.menuArea .list .sub li{
+	display:block;
+	width:200px;
+}
+
+.accordion h4{
+	width:200px;
+	padding:3px 5px;
+	color:#0aa0e7;
+	font-weight:normal;
+	background:#eee;
+}
+.accordion h4.hover{
+	background:#e6e6e6;
+}
+.accordion h4.active{
+	color: #fff;
+	background:#0aa0e7;
+}
+.accordion .barCont{
+	width:200px;
+	padding:3px 5px;
+}
+
+.tabArea ul li{
+	float:left;
+	display:block;
+	padding:5px;
+	width:100px;
+	color:#0aa0e7;
+	background:#eee;
+}
+.tabArea ul li.hover{
+	background:#e6e6e6;
+}
+.tabArea ul li.active{
+	color: #fff;
+	background:#0aa0e7;
+}
+.tabArea ul li a{
+	color:inherit;
+}
+.tabArea .tabCont{
+	padding:10px;
+	width:528px;
+	border:1px solid #eee;
+}
+
+#tooltipArea{
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px 10px;
+	background:#eee;
+}
+
+</style>
+</head>
+<body id="bodyArea">
+<div class="container clear">
+	<div class="main">
+		<div class="menuArea" id="content1">
+				<h3>// スライドダウンメニュー</h3>
+				<ul class="list clear">
+						<li><a href="#">mainMenu1</a>
+								<ul class="sub">
+										<li><a href="#">subMenu1</a></li>
+										<li><a href="#">subMenu2</a></li>
+										<li><a href="#">subMenu3</a></li>
+								</ul>
+						</li>
+						<li><a href="#">mainMenu2</a>
+								<ul class="sub">
+										<li><a href="#">subMenu1</a></li>
+										<li><a href="#">subMenu2</a></li>
+										<li><a href="#">subMenu3</a></li>
+								</ul>
+						</li>
+						<li><a href="#">mainMenu3</a>
+								<ul class="sub">
+										<li><a href="#">subMenu1</a></li>
+										<li><a href="#">subMenu2</a></li>
+										<li><a href="#">subMenu3</a></li>
+								</ul>
+						</li>
+				</ul>
+		</div>
+		<div class="rollover1" id="content2">
+				<h3>// アルファ値のロールオーバー・ロールアウト</h3>
+				<a href="#"><img src="img/b_click.gif" class="over" width="160" height="41" alt="" /></a> <a href="#"><img src="img/b_click.gif" class="over" width="160" height="41" alt="" /></a> <a href="#"><img src="img/b_click.gif" class="over" width="160" height="41" alt="" /></a> </div>
+		<div class="rollover2" id="content3">
+				<h3>// 画像のロールオーバー・ロールアウト</h3>
+				<a href="#"><img src="img/b_click.gif" class="over" width="160" height="41" alt="" /></a> <a href="#"><img src="img/b_click.gif" class="over" width="160" height="41" alt="" /></a> <a href="#"><img src="img/b_click.gif" class="over" width="160" height="41" alt="" /></a>
+		</div>
+		<div class="accordion" id="content4">
+			<h3>// アコーディオン</h3>
+			<div class="accGrp">
+				<h4 class="bar">tab1</h4>
+				<div class="barCont">conetnt...........</div>
+			</div>
+			<div class="accGrp">
+				<h4 class="bar">tab2</h4>
+				<div class="barCont">conetnt...........</div>
+			</div>
+			<div class="accGrp">
+				<h4 class="bar">tab3</h4>
+				<div class="barCont">conetnt...........</div>
+			</div>
+		</div>
+		
+		<div class="tabArea" id="content5">
+			<h3>// タブ</h3>
+			<ul class="tab clear">
+				<li><a href="#tab1">tab1</a></li>
+				<li><a href="#tab2">tab2</a></li>
+				<li><a href="#tab3">tab3</a></li>
+				<li><a href="#tab4">tab4</a></li>
+				<li><a href="#tab5">tab5</a></li>
+			</ul>
+			<div class="tabMain">
+				<div id="tab1" class="tabCont">tab1 conetnt...........</div>
+				<div id="tab2" class="tabCont">tab2 conetnt...........</div>
+				<div id="tab3" class="tabCont">tab3 conetnt...........</div>
+				<div id="tab4" class="tabCont">tab4 conetnt...........</div>
+				<div id="tab5" class="tabCont">tab5 conetnt...........</div>
+			</div>
+		</div>
+		
+		<div class="tooltips" id="content6">
+			<h3>// ツールチップ</h3>
+			<div>
+				content...........content...........&nbsp;<a href="javascript:void(0);" class="tooltip" title="tooltip text">tooltip</a>&nbsp;content...........content...........<br />
+				content...........content...........&nbsp;<a href="javascript:void(0);" class="tooltip" title="tooltip text">tooltip</a>&nbsp;content...........content...........<br />
+				content...........content...........&nbsp;<a href="javascript:void(0);" class="tooltip" title="tooltip text">tooltip</a>&nbsp;content...........content...........<br />
+			</div>
+		</div>
+		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div class="pagetop"><a href="#bodyArea">ページトップへ</a></div>
+		
+	</div>
+	<div class="side">
+		<ul>
+		<li><a href="#content1">スライドダウンメニュー</a></li>
+		<li><a href="#content2">アルファ値のロールオーバー・ロールアウト</a></li>
+		<li><a href="#content3">画像のロールオーバー・ロールアウト</a></li>
+		<li><a href="#content4">アコーディオン</a></li>
+		<li><a href="#content5">タブ</a></li>
+		<li><a href="#content6">ツールチップ</a></li>
+	</ul>
+	</div>
+</div>
+</body>
+</html>
