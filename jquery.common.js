@@ -3,7 +3,7 @@
 jQuery Utility Plugin
 https://github.com/motuni/jQuery.Common
 
-Update:2012.12.12
+Update:2013.2.14
 --------------------------------------------------------
 */
 
@@ -42,7 +42,7 @@ Update:2012.12.12
 			alpha : 0.7
 		}, options);
 
-		$('.over', this)
+		$(this)
 		.hover(function(){
 			$(this).css({'opacity': settings.alpha});
 		},function(){
@@ -57,9 +57,8 @@ Update:2012.12.12
 			hName : '_on' // ロールオーバー時の接尾語
 		}, options);
 
-		$('.over', this).each(function(i){
+		$(this).each(function(i){
 			var src = $(this).attr('src');
-			//var hSrc = src.split('.')[0] + settings.hName + '.' + src.split('.')[1];
 			var hSrc = src.replace(/^(.+)(\.[a-z]+)$/, '$1'+ settings.hName +'$2');
 			var img = new Image();img.src = hSrc; // ロールオーバー画像をプリロード
 
@@ -266,8 +265,8 @@ $(function(){
 	$('.menuArea .list').slideDownMenu({'down': 300, 'up': 100});
 
 	// RollOver Effect
-	$('.rollover1').rollOver({alpha: 0.4});
-	$('.rollover2').rollOver({alpha: 0.2}).rollOverImg({hName: '_on'});
+	$('.onOver').rollOver({alpha: 0.4});
+	$('.onOverImg').rollOver({alpha: 0.2}).rollOverImg({hName: '_on'});
 
 	// Scroll to Anchor
 	$('.pagetop a').scrollToAnc();
