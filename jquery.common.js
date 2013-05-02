@@ -86,7 +86,8 @@ Update:2013.2.14
 		}, options);
 
 		this.click(function(){
-			$($.browser.webkit ? 'body' : 'html').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, settings.speed, settings.easing); return false;
+			//$($.browser.webkit ? 'body' : 'html')
+			$('html, body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, settings.speed, settings.easing); return false;
 		});
 
 		return this;
